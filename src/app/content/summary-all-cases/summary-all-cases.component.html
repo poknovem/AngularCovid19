@@ -1,0 +1,24 @@
+<table class="table table-striped fixTableHead">
+    <thead class="table-dark">
+        <tr class="tr-dark">
+            <th scope="col">{{languages.summaryCaseAll_Date}}</th>
+            <th scope="col">{{languages.summaryCaseAll_NewCase}}</th>
+            <th scope="col">{{languages.summaryCaseAll_NewRecoverd}}</th>
+            <th scope="col">{{languages.summaryCaseAll_NewDeath}}</th>
+            <th scope="col">{{languages.summaryCaseAll_TotalCase}}</th>
+            <th scope="col">{{languages.summaryCaseAll_TotalRecoverd}}</th>
+            <th scope="col">{{languages.summaryCaseAll_TotalDeath}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let item of summaryCasesAll">
+            <td>{{item.txn_date}}</td>
+            <td>{{item.new_case}}</td>
+            <td>{{item.new_recovered}}</td>
+            <td>{{item.new_death}}</td>
+            <td>{{item.total_case}}</td>
+            <td>{{item.total_recovered}}</td>
+            <td>{{item.total_death}}</td>
+         </tr>
+    </tbody>
+</table>
