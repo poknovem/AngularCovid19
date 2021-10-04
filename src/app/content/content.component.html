@@ -1,3 +1,10 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+      <a class="nav-link active" aria-current="page" routerLink="">Timeline</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active-link">
+      <a class="nav-link" routerLink="provinces">Provinces</a>
+    </li>
+</ul>
 
-
-<app-summary-all-cases></app-summary-all-cases>
+<router-outlet></router-outlet>

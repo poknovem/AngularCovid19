@@ -7,5 +7,7 @@ export interface Languages{
     summaryCaseAll_TotalRecoverd : string;
     summaryCaseAll_TotalDeath : string;
 
+    provincesCaseAll_Provinces: string;
+
     REFERENCES : string;
 }

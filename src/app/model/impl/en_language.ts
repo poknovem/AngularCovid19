@@ -1,5 +1,6 @@
 import { Languages } from '../languages';
 export class ENLanguage implements Languages{
+    provincesCaseAll_Provinces: string = "Province";
     summaryCaseAll_Date: string = "Date";
     summaryCaseAll_NewCase: string = "New Confirmed";
     summaryCaseAll_NewRecoverd: string = "New Recovered";

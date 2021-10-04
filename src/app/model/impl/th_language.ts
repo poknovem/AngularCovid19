@@ -1,5 +1,6 @@
 import { Languages } from '../languages';
  export class ThLanguage implements Languages{
+    provincesCaseAll_Provinces: string = "จังหวัด";
     summaryCaseAll_Date: string = "วันที่";
     summaryCaseAll_NewCase: string = "ผู้ป่วยใหม่";
     summaryCaseAll_NewRecoverd: string = "รักษาหายใหม่";
