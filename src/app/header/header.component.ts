@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { LanguagesService } from '../services/languages.service';
 import { Languages } from 'src/app/model/languages';
 import { Constants } from '../constants/Constants';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -9,14 +10,19 @@ import { Constants } from '../constants/Constants';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   languages! : Languages;
+  languagesSubscription! : Subscription;
   
 
   constructor(private languagesService: LanguagesService) { }
 
+  ngOnDestroy(): void {
+    this.languagesSubscription.unsubscribe;
+  }
+
   ngOnInit(): void {
-    this.languagesService.languagesSubject.subscribe(subject=>{
+    this.languagesSubscription = this.languagesService.languagesSubject.subscribe(subject=>{
       this.languages = subject;
     });
   }
