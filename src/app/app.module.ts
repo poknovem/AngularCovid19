@@ -11,6 +11,8 @@ import { ProvincesModule } from './content/provinces/provinces.module';
 
 const appRoutes: Routes = [
   { path: "", redirectTo:"/summary", pathMatch: "full"},
+  { path: "summary", loadChildren: ()=>import('./content/summary-all-cases/summary-all-cases.module').then(m=>m.SummaryAllCasesModule)},
+  { path: "provinces", loadChildren: ()=>import('./content/provinces/provinces.module').then(m=>m.ProvincesModule)},
   { path: "**", redirectTo:"/summary", pathMatch: "full"}
 ];
 
@@ -24,8 +26,6 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    SummaryAllCasesModule,
-    ProvincesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

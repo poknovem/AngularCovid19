@@ -4,7 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { ProvincesComponent } from "./provinces.component";
 
 const featureRoutes: Routes = [
-    { path: "provinces", component: ProvincesComponent}
+    { path: "", component: ProvincesComponent}
   ];
 
 @NgModule({
@@ -17,5 +17,5 @@ const featureRoutes: Routes = [
     ],
   })
 export class ProvincesModule{
-    
+
 }

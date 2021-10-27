@@ -4,7 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { SummaryAllCasesComponent } from "./summary-all-cases.component";
 
 const featureRoutes: Routes = [
-    { path: "summary", component: SummaryAllCasesComponent}
+    { path: "", component: SummaryAllCasesComponent}
   ];
 
 @NgModule({
