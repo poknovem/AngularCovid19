@@ -10,10 +10,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProvincesComponent } from './content/provinces/provinces.component';
 
 const appRoutes: Routes = [
-  { path: "", component: SummaryAllCasesComponent},
+  { path: "", redirectTo:"/summary", pathMatch: "full"},
   { path: "summary", component: SummaryAllCasesComponent},
   { path: "provinces", component: ProvincesComponent},
-  { path: "**", component: SummaryAllCasesComponent}
+  { path: "**", redirectTo:"/summary", pathMatch: "full"}
 ];
 
 @NgModule({
