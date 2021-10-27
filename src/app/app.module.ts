@@ -3,31 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SummaryAllCasesComponent } from './content/summary-all-cases/summary-all-cases.component';
 import { ContentComponent } from './content/content.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ProvincesComponent } from './content/provinces/provinces.component';
+import { SummaryAllCasesModule } from './content/summary-all-cases/summary-all-cases.module';
+import { ProvincesModule } from './content/provinces/provinces.module';
 
 const appRoutes: Routes = [
   { path: "", redirectTo:"/summary", pathMatch: "full"},
-  { path: "summary", component: SummaryAllCasesComponent},
-  { path: "provinces", component: ProvincesComponent},
   { path: "**", redirectTo:"/summary", pathMatch: "full"}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SummaryAllCasesComponent,
     ContentComponent,
     HeaderComponent,
-    ProvincesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    SummaryAllCasesModule,
+    ProvincesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
